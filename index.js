@@ -20,7 +20,7 @@ const options = {
   useUnifiedTopology: true
 }
 
-mongoose.connect('mongodb+srv://admin:djaskldjas@cluster0.1eazd.mongodb.net/hola?retryWrites=true&w=majority', options)
+mongoose.connect(process.env.MONGO_URI, options)
 .then(() => console.log("Conectado a la BD"))
 
 const PORT = 3001
